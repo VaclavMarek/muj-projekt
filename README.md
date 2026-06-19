@@ -1,2 +1,0 @@
-# muj-projekt
-Můj projekt
