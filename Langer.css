@@ -1,0 +1,479 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap');
+
+:root {
+    --bg: #F4F4F4; /* 60% - hlavní pozadí - světle šedá */
+    --text: #1A1A1A; /* 30% - hlavní text - antracit */
+    --accent: #E30613; /* 10% - sytě červená nadpisu/nav (barevné schéma 60-30-10) */
+    --accent-text: #FFFFFF; /* text na akcentu - bílá */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+header {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.langer,
+.flanger,
+.Flanger {
+    display: block;
+    margin: 0 0 1.5rem 0;
+    max-width: 18.75rem; /* 300px */
+    width: 100%;
+    height: auto;
+}
+
+.footer {
+    background-color: gray;
+    color: white;
+    padding: 10px 0;
+    width: 100%;
+    margin-top: auto;
+}
+.vodorovne {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    background-color: var(--accent);
+    margin: 0;
+    padding: 0.5rem 0;
+    width: 100vw;
+    font-size: 1.6rem;
+    list-style: none;
+    color: var(--accent-text);
+    margin-left: calc(-50vw + 50%);
+}
+.vodorovne li {
+    list-style: none;
+}
+.vodorovne a {
+    text-decoration: none;
+}
+.nadpis {
+    background-color: var(--accent);
+    margin: 0;
+    padding: 1.25rem 0;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--accent-text);
+    font-size: 3.5rem;
+    text-align: center;
+    width: 100%;
+    margin-left: 0;
+}
+.a {
+    font-size: 2rem;
+}
+.b {
+    font-size: 1.5rem;
+    overflow: hidden;
+}
+
+/* odkazy obecně ve stránce - tmavý text */
+a:link,
+a:visited {
+    color: var(--text);
+}
+
+/* navigační odkazy v horním pásu */
+.vodorovne a,
+.vodorovne a:visited {
+    color: var(--accent-text);
+    display: inline-block;
+    padding: 0.35rem 0.8rem;
+    border-radius: 6px;
+    transition: all 180ms ease-in-out;
+    text-decoration: none;
+}
+
+.vodorovne a:not(.active):hover {
+    background: rgba(255,255,255,0.08);
+    color: var(--accent-text);
+}
+
+.vodorovne a.active,
+.vodorovne a.active:visited {
+    color: var(--accent-text);
+    border: 3px solid var(--accent-text);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+    background: rgba(255,255,255,0.06);
+}
+
+a:hover,
+a:focus {
+    color: #333333;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+main {
+    width: min(100%, 72rem);
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+}
+
+article {
+    margin: 0 auto;
+    max-width: 68rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+section p,
+section li,
+section blockquote {
+    text-align: justify;
+}
+
+figure {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    align-items: start;
+    margin: 1.5rem 0;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    border-radius: 0.5rem;
+}
+
+figure figcaption {
+    margin: 0;
+    color: #444444;
+    font-size: 0.95rem;
+}
+
+/* Základní barvy a typografie pro nadpisy */
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--text);
+    margin: 1rem 0;
+}
+
+h2, h3, h4, h5 {
+    font-family: 'Playfair Display', serif;
+    color: var(--text);
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 1.5rem 0 1rem 0;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(20rem, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem auto 2rem;
+    padding: 0 1rem;
+    max-width: 1200px;
+}
+
+.gallery-container figure {
+    margin: 0;
+    background: #FFFFFF;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+    min-height: 25rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-container .gallery-img {
+    width: 100%;
+    height: 100%;
+    max-height: 24rem;
+    display: block;
+    object-fit: cover;
+}
+
+.gallery-container figcaption {
+    padding: 0.85rem 1rem 1rem;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: #333333;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 900px;
+    margin: 1rem auto;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+table th,
+table td {
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    padding: 0.75rem 1rem;
+    text-align: left;
+}
+
+table caption {
+    caption-side: top;
+    margin-bottom: 0.75rem;
+    font-weight: bold;
+}
+
+/* Formulář */
+form {
+    max-width: 32rem;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #CCC;
+    border-radius: 0.25rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(227, 6, 19, 0.1);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 0.5rem;
+}
+
+.checkbox-group,
+.radio-group {
+    margin-top: 0.5rem;
+}
+
+.checkbox-group label,
+.radio-group label {
+    display: inline-block;
+    margin-right: 1.5rem;
+    font-weight: normal;
+}
+
+button[type="submit"] {
+    background-color: var(--accent);
+    color: var(--accent-text);
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 180ms ease-in-out;
+}
+
+button[type="submit"]:hover {
+    background-color: #B00410;
+}
+
+.floating-logo {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    width: 4rem;
+    height: 4rem;
+    display: grid;
+    place-items: center;
+    background-color: white;
+    color: var(--accent);
+    text-decoration: none;
+    border-radius: 50%;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    z-index: 1000;
+}
+
+.floating-logo span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    z-index: 10000;
+}
+
+.modal:target {
+    display: flex;
+}
+
+.modal-content {
+    width: min(40rem, 100%);
+    max-height: 90vh;
+    overflow-y: auto;
+    background: #FFFFFF;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    position: relative;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    color: var(--text);
+    font-size: 1.2rem;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.modal-close:hover {
+    background: #f4f4f4;
+}
+
+.modal h2 {
+    margin-top: 0;
+}
+
+/* Media Queries - Mobilní zařízení (max 768px) */
+@media (max-width: 48rem) {
+    .nadpis {
+        font-size: 2rem;
+    }
+    
+    .vodorovne {
+        flex-direction: column;
+        gap: 0;
+        font-size: 1rem;
+        width: 100%;
+    }
+    
+    .vodorovne a {
+        display: block;
+        padding: 1rem 0;
+        border-radius: 0;
+        text-align: center;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .vodorovne a.active {
+        border: none;
+        border-left: 4px solid var(--accent-text);
+    }
+    
+    .langer,
+    .flanger,
+    .Flanger {
+        float: none;
+        max-width: 100%;
+        margin: 1rem 0;
+    }
+
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-container figure {
+        min-height: auto;
+    }
+
+    figure {
+        grid-template-columns: 1fr;
+    }
+    
+    table {
+        font-size: 0.9rem;
+    }
+    
+    table th,
+    table td {
+        padding: 0.5rem 0.75rem;
+    }
+    
+    form {
+        margin: 1.5rem auto;
+        padding: 1.5rem;
+    }
+    
+    h1 {
+        font-size: 1.75rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    h3 {
+        font-size: 1.25rem;
+    }
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Václav Marek">
+    <meta name="description" content="Kariéra Filipa Langera – jeho úspěchy v České republice, účast v reprezentaci a hráčská kariéra ve švédské Superlize SSL. Podívejte se na jeho profesionální cestu.">
+    <meta name="keywords" content="Filip Langer, kariéra, reprezentace, SSL, profesionální florbal">
+    <link rel="stylesheet" href="Langer.css">
+    <title>Filip Langer – Profesionální kariéra</title>
+</head>
+<body>
+    <a href="#auth-modal" class="floating-logo">👤<span>Účet</span></a>
+    <header>
+        <h1 class="nadpis">Filip Langer</h1>
+        <nav aria-label="Hlavní navigace">
+            <ul class="vodorovne">
+                <li><a href="uvodni_stranka.html">Úvod</a></li>
+                <li><a href="pribeh.html">Příběh</a></li>
+                <li><a href="galerie_media.html">Galerie</a></li>
+                <li><a href="repre.html" class="active">Kariéra</a></li>
+                <li><a href="proc_prave_on.html">Můj vztah</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <section>
+                <h2>Profesionální kariéra</h2>
+                <figure>
+                    <img class="flanger" src="img/jpg/kariera.jpg" alt="Filip Langer s vítězným pohárem" width="300" height="300">
+                    <figcaption>Filip Langer s vítězným pohárem po důležitém turnaji.</figcaption>
+                </figure>
+                <p>
+                    Filip Langer odstartoval svou elitní kariéru v dresu Tatranu Střešovice, kde v nejvyšší české soutěži debutoval již v šestnácti letech a okamžitě se zařadil mezi klíčové postavy týmu. Jeho výjimečný talent a herní přehled brzy přilákaly pozornost skautů ze zahraničí. Klíčovým krokem v jeho profesionálním růstu se stal přestup do švédské Superligy (SSL), která je obecně považována za nejlepší a nejnáročnější florbalovou ligu světa. Ve Švédsku oblékal dres elitních klubů jako FBC Kalmarsund nebo Storvreta IBK. Zde se dokázal prosadit v obrovské mezinárodní konkurenci a vypracoval se v respektovanou hvězdu, která pravidelně rozhoduje zápasy proti těm nejlepším světovým obráncům.
+                </p>
+            </section>
+
+            <section>
+                <h2>Úspěchy a ocenění</h2>
+                <p>
+                    Sbírka úspěchů Filipa Langera je na jeho věk mimořádná a inspirující. Mezi jeho největší milníky patří historický zisk zlatých medailí na Mistrovství světa juniorů, kde jako jeden z lídrů dovedl český národní tým k titulu šampionů. Na seniorské mezinárodní scéně dosáhl obrovského úspěchu v roce 2022, kdy s reprezentací mužů vybojoval stříbrné medaile na Mistrovství světa ve Švýcarsku. Vedle týmových úspěchů sbírá Filip i prestižní individuální ocenění. Pravidelně se umisťuje na předních příčkách v domácí anketě Florbalista sezóny a odborná veřejnost ho dlouhodobě řadí mezi nejinteligentnější hráče na hřišti, a to především díky jeho skvělé produktivitě, hernímu přehledu a vůdčím schopnostem v klíčových momentech zápasů.
+                </p>
+            </section>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <p>Autor: Václav Marek © 2026</p>
+        <address>
+            IT1.B<br>
+            Vyšší odborná škola,<br>
+            Střední průmyslová škola a Jazyková škola s právem státní jazykové zkoušky<br>
+            Masarykova 197, Kutná Hora, 28401, Česká republika
+        </address>
+    </footer>
+
+    <div id="auth-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="auth-title">
+        <div class="modal-content auth-container">
+            <a href="#" class="modal-close" aria-label="Zavřít">✕</a>
+            
+            <div class="auth-box">
+                <h2 id="auth-title">Přihlášení</h2>
+                <form method="POST" action="#" novalidate>
+                    <div class="form-group">
+                        <label for="login-email">E-mail:</label>
+                        <input type="email" id="login-email" name="email" placeholder="vase.email@priklad.cz" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="login-password">Heslo:</label>
+                        <input type="password" id="login-password" name="password" placeholder="Zadejte heslo" required>
+                    </div>
+
+                    <button type="submit">Přihlásit se</button>
+                </form>
+            </div>
+
+            <hr class="auth-divider">
+
+            <div class="auth-box">
+                <h2>Registrace</h2>
+                <form method="POST" action="#" novalidate>
+                    <div class="form-group">
+                        <label for="reg-name">Jméno a příjmení:</label>
+                        <input type="text" id="reg-name" name="name" placeholder="Vaše jméno" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reg-email">E-mail:</label>
+                        <input type="email" id="reg-email" name="email" placeholder="vase.email@priklad.cz" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reg-password">Heslo:</label>
+                        <input type="password" id="reg-password" name="password" placeholder="Vytvořte si silné heslo" required>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label><input type="checkbox" name="agree" required> Souhlasím se zpracováním dat</label>
+                    </div>
+
+                    <button type="submit">Registrovat se</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

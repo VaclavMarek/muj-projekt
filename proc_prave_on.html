@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Václav Marek">
+    <meta name="description" content="Zjistěte, proč je Filip Langer důležitou osobou a jak se k němu postavujeme. Přidejte se k jeho fanům a podělte se svým názorem na jeho kariéru.">
+    <meta name="keywords" content="Filip Langer, názor, vztah, fanoušci, podpora">
+    <link rel="stylesheet" href="Langer.css">
+    <title>Filip Langer – Můj vztah k osobě</title>
+</head>
+<body>
+    <a href="#auth-modal" class="floating-logo">👤<span>Účet</span></a>
+    <header>
+        <h1 class="nadpis">Filip Langer</h1>
+        <nav aria-label="Hlavní navigace">
+            <ul class="vodorovne">
+                <li><a href="uvodni_stranka.html">Úvod</a></li>
+                <li><a href="pribeh.html">Příběh</a></li>
+                <li><a href="galerie_media.html">Galerie</a></li>
+                <li><a href="repre.html">Kariéra</a></li>
+                <li><a href="proc_prave_on.html" class="active">Můj vztah</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <section>
+                <h2>Můj vztah k Filipu Langerovi</h2>
+                <figure>
+                    <img class="flanger" src="img/jpg/images.jpg" alt="Filip Langer při zápase" width="300" height="300">
+                    <figcaption>Filip Langer v typickém herním střihu během zápasu.</figcaption>
+                </figure>
+                <p>
+                    Filip Langer je pro mě obrovským vzorem nejen jako vynikající sportovec, ale také jako člověk s profesionálním přístupem k tréninku i životu. Fascinuje mě jeho klid a přehled, s jakým řeší krizové situace na hřišti pod velkým tlakem. Jeho kariéra ukazuje, že když má člověk jasný cíl a je ochotný pro něj tvrdě pracovat, může dosáhnout svých snů a reprezentovat svou zemi na té nejvyšší úrovni. Sledovat jeho zápasy v reprezentaci nebo ve Švédsku je pro mě vždy skvělý sportovní zážitek.
+                </p>
+            </section>
+
+            <section>
+                <h2>Účet fanouška</h2>
+                <p>Máte už vytvořený profil? Přihlaste se nebo se zaregistrujte kliknutím na ikonu v pravém horním rohu.</p>
+            </section>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <p>Autor: Václav Marek © 2026</p>
+        <address>
+            IT1.B<br>
+            Vyšší odborná škola,<br>
+            Střední průmyslová škola a Jazyková škola s právem státní jazykové zkoušky<br>
+            Masarykova 197, Kutná Hora, 28401, Česká republika
+        </address>
+    </footer>
+
+    <div id="auth-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="auth-title">
+        <div class="modal-content auth-container">
+            <a href="#" class="modal-close" aria-label="Zavřít">✕</a>
+            
+            <div class="auth-box">
+                <h2 id="auth-title">Přihlášení</h2>
+                <form method="POST" action="#" novalidate>
+                    <div class="form-group">
+                        <label for="login-email">E-mail:</label>
+                        <input type="email" id="login-email" name="email" placeholder="vase.email@priklad.cz" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="login-password">Heslo:</label>
+                        <input type="password" id="login-password" name="password" placeholder="Zadejte heslo" required>
+                    </div>
+
+                    <button type="submit">Přihlásit se</button>
+                </form>
+            </div>
+
+            <hr class="auth-divider">
+
+            <div class="auth-box">
+                <h2>Registrace</h2>
+                <form method="POST" action="#" novalidate>
+                    <div class="form-group">
+                        <label for="reg-name">Jméno a příjmení:</label>
+                        <input type="text" id="reg-name" name="name" placeholder="Vaše jméno" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reg-email">E-mail:</label>
+                        <input type="email" id="reg-email" name="email" placeholder="vase.email@priklad.cz" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reg-password">Heslo:</label>
+                        <input type="password" id="reg-password" name="password" placeholder="Vytvořte si silné heslo" required>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label><input type="checkbox" name="agree" required> Souhlasím se zpracováním dat</label>
+                    </div>
+
+                    <button type="submit">Registrovat se</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
